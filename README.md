@@ -1,8 +1,8 @@
-# <img src="docs/headers/h1-shashin.svg" alt="SHASHIN" height="60">
+# SHASHIN
 
 One photo a day, only for your friends.
 
-## <img src="docs/headers/h2-about.svg" alt="ABOUT" height="38">
+## ABOUT
 
 Shashin is a private photo diary. Each person posts one picture a day, only friends they've
 *accepted* can see it, and the *Library* collects every week of photos into something like an album.
@@ -12,7 +12,7 @@ It works straight away in **demo mode**, with everything stored in your browser,
 without setting anything up. Connect it to a free Supabase project when you want real accounts and
 friends on other phones.
 
-## <img src="docs/headers/h2-features.svg" alt="FEATURES" height="38">
+## FEATURES
 
 - One photo per day, using your phone's *local date* (not UTC)
 - Friends by username, with requests you accept or decline
@@ -22,7 +22,7 @@ friends on other phones.
 - Installable on a phone's home screen (*PWA*)
 - Made for phones first: large buttons, safe-area padding, reduced motion respected
 
-## <img src="docs/headers/h2-how-it-works.svg" alt="HOW IT WORKS" height="38">
+## HOW IT WORKS
 
 All data access goes through one `Backend` interface (`src/lib/backend/types.ts`) with two versions:
 
@@ -32,7 +32,7 @@ All data access goes through one `Backend` interface (`src/lib/backend/types.ts`
 
 The app picks Supabase when its URL and key are set, and *demo mode* otherwise.
 
-## <img src="docs/headers/h2-architecture.svg" alt="ARCHITECTURE" height="38">
+## ARCHITECTURE
 
 ```mermaid
 flowchart LR
@@ -47,7 +47,7 @@ flowchart LR
 
 Screens never talk to a database directly. They use one interface with two versions, so *demo mode* and Supabase behave the same.
 
-## <img src="docs/headers/h2-tech-stack.svg" alt="TECH STACK" height="38">
+## TECH STACK
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-000000?style=flat-square&logo=react&logoColor=white" alt="React">
@@ -69,7 +69,7 @@ Screens never talk to a database directly. They use one interface with two versi
 | Offline demo | IndexedDB |
 | Quality | Vitest, oxlint, Prettier |
 
-## <img src="docs/headers/h2-getting-started.svg" alt="GETTING STARTED" height="38">
+## GETTING STARTED
 
 You need [Node.js](https://nodejs.org) 20 or newer.
 
@@ -86,7 +86,7 @@ Ravi). To start over, go to **Friends → your avatar → Reset demo data**.
 **On your phone:** connect to the same Wi-Fi and open the `Network:` address that `npm run dev`
 prints, for example `http://192.168.1.23:5173`. Use **Add to Home Screen** for an app-like feel.
 
-### <img src="docs/headers/h3-using-supabase.svg" alt="USING SUPABASE" height="28">
+### USING SUPABASE
 
 1. Create a free project at [supabase.com](https://supabase.com).
 2. Open **SQL Editor**, paste the contents of
@@ -98,7 +98,7 @@ prints, for example `http://192.168.1.23:5173`. Use **Add to Home Screen** for a
    from **Project Settings → API**. Never put the `service_role` key in the app.
 5. Restart `npm run dev`.
 
-### <img src="docs/headers/h3-deploying-to-vercel.svg" alt="DEPLOYING TO VERCEL" height="28">
+### DEPLOYING TO VERCEL
 
 1. Import the repo at [vercel.com/new](https://vercel.com/new). The Vite settings are detected
    automatically, and `vercel.json` already handles page routes.
@@ -106,7 +106,7 @@ prints, for example `http://192.168.1.23:5173`. Use **Add to Home Screen** for a
 3. In Supabase, under **Authentication → URL Configuration**, set the Site URL to your Vercel
    address and add it to the Redirect URLs.
 
-## <img src="docs/headers/h2-commands.svg" alt="COMMANDS" height="38">
+## COMMANDS
 
 | Command | What it does |
 |---|---|
@@ -115,7 +115,7 @@ prints, for example `http://192.168.1.23:5173`. Use **Add to Home Screen** for a
 | `npm run check` | Lint, type-check, test and build in one go |
 | `npm run build` | Production build |
 
-## <img src="docs/headers/h2-project-structure.svg" alt="PROJECT STRUCTURE" height="38">
+## PROJECT STRUCTURE
 
 ```
 src/
@@ -127,7 +127,7 @@ src/
 supabase/migrations/  database schema, security rules and storage policies
 ```
 
-## <img src="docs/headers/h2-notes-for-contributors.svg" alt="NOTES FOR CONTRIBUTORS" height="38">
+## NOTES FOR CONTRIBUTORS
 
 - Design direction: dark, warm and minimal, like film photos. Accent `#FFD84D` on `#0E0E10`.
   Design at 390 px wide. Heavy backgrounds only on the sign-in screen.
@@ -137,11 +137,11 @@ supabase/migrations/  database schema, security rules and storage policies
 - Every database change is a new file in `supabase/migrations`.
 - Run `npm run check` before committing.
 
-## <img src="docs/headers/h2-status.svg" alt="STATUS" height="38">
+## STATUS
 
 Version 1 is complete and works in both demo and Supabase mode. Next up is wrapping it as a native
 Android and iOS app with Capacitor.
 
-## <img src="docs/headers/h2-license.svg" alt="LICENSE" height="38">
+## LICENSE
 
 MIT. See [LICENSE](LICENSE).
